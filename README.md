@@ -17,3 +17,7 @@ I recorded short video
 * Microsoft http://www.youtube.com/watch?v=hewydvSBeUc
 * IT Maranatha http://www.youtube.com/watch?v=kukYJT2yVr0
 * EC-Council http://www.youtube.com/watch?v=khtglhiKr3w
+
+Photo 
+-----
+* Winarto http://www.flickr.com/photos/zakiakhmad/7871533168/
