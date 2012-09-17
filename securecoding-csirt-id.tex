@@ -1,63 +1,41 @@
 \documentclass[xcolor=pdftex,table,handouts]{beamer}
 
 \usepackage[english]{babel}
-%\usepackage[latin1]{inputenc}
-%\usepackage{times}
-%\usepackage[T1]{font enc}
-%\usepackage{graphics}
 \usepackage{graphicx}
 \usepackage{verbatim}
-%\usepackages{xcolor}
 \usepackage{fancybox}
-
-\usepackage{fontspec}
-%\usepackage{xunicode}
-%\usepackage{xlxtra}
-\setmainfont{Calibri}
-
-%\begin{comment}
-%\usepackage[lstset]{pxfonts}
 \usepackage{listings}
-%\usepackage{inconsolata}
+%\usepackage{adjustbox}
+
+\graphicspath{{/home/za/Dokumen/csirt/git/figure/}}
 
 \lstset{
 	language=php,
 	basicstyle=\tiny\ttfamily,
+	%basicstyle=\footnotesize,	
 	keywordstyle=\color{black},
 	stringstyle=\color{black},
 	identifierstyle=\color{black},
 	commentsytle={gray},
 	numbers=left, 
-	numberstyle=\tiny,
+	numberstyle=\tiny\color{gray},
+	numbersep=3pt,
 	emph=[1]{php},
 	emphstyle=[1]\color{black},
-	%emph=[2]{if,and,or,else},
-	%emphstyle=[2]\color{yellow}
-	%emph=[2]{'$pass = md5( $pass )';},
-	%emphstyle=[2]\color{red},
 	showstringspaces=false,
-	frame=leftline
+	%frame=leftline
 	}
-%\end{comment}
 
-%\setbeamertemplate{footline}{A Sample Talk}
-
-%\usepackage{pifont}
 \useoutertheme{infolines}
 \useinnertheme{rectangles}
 
-
 \begin{document}
-
-%\mode<presentation>
 
 \title{Secure Coding}
 \subtitle{di OWASP}
 \author{Zaki Akhmad}
-%\affiliation{OWASP}
 \institute{OWASP Indonesia}
 \date{30 Mei 2012}
-%\institute{Chapter Leader OWASP Indonesia}
 
 \begin{frame}
 	\titlepage
@@ -75,27 +53,19 @@
 
 \begin{frame}
 	\frametitle{Tentang Zaki Akhmad}
-	%\begin{columns}
-	%	\begin{column}{0.5\textwidth}
 			\begin{description}
 				\item[Surel] za@owasp.org
 				\item[Twitter] @zakiakhmad	
 				\item[Pendidikan]
-				%\begin{description}
 				\item[S2] Elektro ITB, 2007-2009
 				\item[S1] Elektro ITB, 2001-2006
-				%\end{description}
 				\item[Pekerjaan]
 				\item[indocisc] Analis Keamanan, 2007 - sekarang
 				\item[PAU-ME] Peneliti, 2007-2009
 			\end{description}
- 	%	\end{column}
- 	%	\begin{column}{0.5\texwidth}
  			\begin{flushleft}
-				\includegraphics[height=3cm]{/home/za/Gambar/za-beijing.jpeg}
+				\includegraphics[height=3cm]{za-beijing.jpeg}
 			\end{flushleft}
- 	%	\end{column}
-	%\end{columns}
 \end{frame}
 
 \section{Mengapa Perlu Secure Coding}
@@ -105,10 +75,10 @@
 	\vskip-1cm
 	\begin{columns}		
 		\column{0.4\textwidth}
-        \includegraphics[height=4cm]{/home/za/Dokumen/owasp/id/itb/google-perspective.png} \pause
+        \includegraphics[height=4cm]{google-perspective.png} \pause
         \column{0.6\textwidth}
 		\vskip4cm 
-		\includegraphics[height=2cm]{/home/za/Dokumen/owasp/id/itb/network.png} \pause		
+		\includegraphics[height=2cm]{network.png} \pause		
 	\end{columns}
 	\vskip.5cm
 	.. . pada praktiknya firewall, IDS/IPS tidak mampu mencegah serangan \textit{SQL injection}. Aplikasi sendiri harus aman. 
@@ -131,14 +101,10 @@
 			\end{itemize}
 		\column{.6\textwidth}
 	\begin{center}
-\includegraphics[scale=.75]{/home/za/Dokumen/owasp/OWASP_Image_Toolbox/owasp_3Wx300dpi.jpg}	
+\includegraphics[scale=.75]{owasp_3Wx300dpi.jpg}	
 \end{center}	
 	\end{columns}
 \end{frame}
-
-
-
-
 
 \subsection{Tools}
 \begin{frame}
@@ -155,7 +121,7 @@
 			\end{itemize}
 		\column{.4\textwidth}
 			\begin{center}
-				\includegraphics[height=3cm]{/home/za/Gambar/owasp_logo.jpg}
+				\includegraphics[height=3cm]{owasp_logo.jpg}
 			\end{center}
 		\end{columns}
 \end{frame}
@@ -184,9 +150,9 @@
 			\end{itemize}
 		\column{.3\textwidth}
 			\begin{center}
-				\includegraphics<1>[height=3cm]{/home/za/Gambar/beamer/beamer-0.jpg}
-				\includegraphics<2>[height=3cm]{/home/za/Gambar/beamer/beamer-1.jpg}
-				\includegraphics<3>[height=3cm]{/home/za/Gambar/beamer/beamer-2.jpg}
+				\includegraphics<1>[height=3cm]{beamer-0.jpg}
+				\includegraphics<2>[height=3cm]{beamer-1.jpg}
+				\includegraphics<3>[height=3cm]{beamer-2.jpg}
 			\end{center}
 		\end{columns}
 \end{frame}
@@ -209,13 +175,10 @@
 			\end{itemize}
 		\column{.6\textwidth}
 			\begin{center}
-				\includegraphics[height=4cm]{/home/za/Gambar/wikipedia.jpg}
+				\includegraphics[height=4cm]{wikipedia.jpg}
 			\end{center}	
 	\end{columns}
 \end{frame}
-
-
-
 
 \begin{frame}
 	\begin{columns}
@@ -231,12 +194,11 @@
 			\end{itemize}		
 		\column{.6\textwidth}
 			\begin{center}
-				\includegraphics<1>[height=5cm]{/home/za/Gambar/owasp-top-ten-2010.jpg}
-				\includegraphics<2>[height=5cm]{/home/za/Gambar/owasp-testing-guide.jpg}
-				\includegraphics<3>[height=5cm]{/home/za/Gambar/owasp-development-guide.jpg}
-				\includegraphics<4>[height=5cm]{/home/za/Gambar/owasp-asvs.jpeg}
+				\includegraphics<1>[height=5cm]{owasp-top-ten-2010.jpg}
+				\includegraphics<2>[height=5cm]{owasp-testing-guide.jpg}
+				\includegraphics<3>[height=5cm]{owasp-development-guide.jpg}
+				\includegraphics<4>[height=5cm]{owasp-asvs.jpeg}
 			\end{center}
-
 	\end{columns}
 \end{frame}
 
@@ -245,7 +207,7 @@
 \begin{frame}
 	\frametitle{Konferensi}
 	\begin{center}
-		\includegraphics[height=5cm]{/home/za/Gambar/owasp-summit.jpg}
+		\includegraphics[height=5cm]{owasp-summit.jpg}
 		\\ 
 		\vskip.5cm
 		\small{Summit, Konferensi (Asia-Pasifik, Eropa, Amerika Utara, Amerika Latin)}
@@ -257,7 +219,7 @@
 \begin{frame}
 	\frametitle{Chapter}
 	\begin{center}
-		\includegraphics[height=5cm]{/home/za/Gambar/owaspid.jpg} 
+		\includegraphics[height=5cm]{owaspid.jpg} 
 		\vskip.5cm		
 		Singapura, Malaysia, Korea Selatan, \textbf{Indonesia}, Jepang
 	\end{center}
@@ -268,7 +230,7 @@
 \begin{frame}
 	\frametitle{OWASP Indonesia}
 	\begin{center}
-		\includegraphics[height=5cm]{/home/za/Gambar/owaspid-site.jpg}			
+		\includegraphics[height=5cm]{owaspid-site.jpg}			
 	\end{center}
 	\begin{description}
 		\item[Situs] {\href{http://www.owasp.or.id}{www.owasp.or.id}}
@@ -282,12 +244,12 @@
 	\begin{center}	
 	\begin{columns}			
 		\column{.3\textwidth}
-			\includegraphics[height=4cm]{/home/za/Gambar/owaspid-topten.jpg}
+			\includegraphics[height=4cm]{owaspid-topten.jpg}
 			\\ \begin{center}
 					Top 10 - 2010
 				\end{center} 		
 		\column{.3\textwidth}
-			\includegraphics[height=4cm]{/home/za/Gambar/owaspid-asvs.jpg}
+			\includegraphics[height=4cm]{owaspid-asvs.jpg}
 			\\ \begin{center}
 					ASVS
 				\end{center}
@@ -310,14 +272,13 @@
 \section{Secure Coding}
 \subsection{Where is Secure Coding?}
 
-
 \begin{frame}
 	\frametitle{\textbf{Where} is Secure Coding}
 	\begin{center}
 	%\begin{columns}
 	%	\column{.5\textwidth}
 	%	\column{.5\textwidth}
-			\includegraphics[height=5cm]{/home/za/Gambar/securitythroughlifecycle.jpg}
+			\includegraphics[height=5cm]{securitythroughlifecycle.jpg}
 			\\
 			\vskip.5cm
 			\small{{\href{http://www.amazon.com/Software-Security-Building-In/dp/0321356705}{Software Security, Gary McGraw}}}
@@ -329,11 +290,7 @@
 
 \begin{frame}[fragile]
 	\frametitle{Code Snippets}
-	%\begin{verbatim}
-		%\begin{lstlisting}
-			\lstinputlisting{/home/za/Dokumen/csirt/sqli-low.php}
-		%\end{lstlisting}
-	%\end{verbatim}	
+			\lstinputlisting{/home/za/Dokumen/csirt/git/sqli-low.php}
 	\begin{center}
 	Perhatikan baris ke-5 s/d 8
 	\end{center}
@@ -341,11 +298,7 @@
 
 \begin{frame}[fragile]
 	\frametitle{Code Snippets}
-	%\begin{verbatim}
-		%\begin{lstlisting}
-			\lstinputlisting{/home/za/Dokumen/csirt/login.php}
-		%\end{lstlisting}
-	%\end{verbatim}	
+			\lstinputlisting{/home/za/Dokumen/csirt/git/login.php}
 	\begin{center}
 		Perhatikan baris ke-17
 	\end{center}
@@ -390,12 +343,6 @@
 		\end{enumerate}
 	\end{enumerate}
 \end{frame}
-
-%\begin{frame}
-%	\frametitle{box}
-%	\ovalbox{hello}
-%	\doublebox{world}
-%\end{frame}
 
 \begin{frame}
 	\frametitle{OWASP Secure Coding - Quick Reference Guide}
@@ -468,7 +415,7 @@
 \begin{frame}
 	\frametitle{Terima Kasih}
 	\begin{center}
-	\includegraphics[height=5cm]{/home/za/Gambar/IMG_2825.JPG}
+	\includegraphics[height=5cm]{IMG_2825.JPG}
 		\vskip.5cm \textit{hatur nuhun, matur suwun, \\ thank you, arigatou, danke, merci beaucoup \\}
 		\vskip.3cm		
 		\tiny{foto-foto {\href{http://flickr.com/zakiakhmad}{flickr.com/zakiakhmad}}}
