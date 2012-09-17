@@ -1,8 +1,11 @@
+# the .gitignore file
+# untrack file & directory
 .aux
 .log
 .nav
 .out
+.pdf
 .snm
 .toc
 .vrb
-/figure
+figure/
